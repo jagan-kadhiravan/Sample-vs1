@@ -1,0 +1,54 @@
+<html>
+    <head><h1>
+        Platform to do calculations:
+    </h1>
+    <p>Give a numbers here!!</p>
+    </head>
+    <br>
+    <body>
+    <input id="val1"/>
+    <input id="val2"/>
+    <br>
+    <br>
+    <button id="addbtn">ADD</button>
+    <br>
+    <button id="subbtn">SUB</button>
+    <p id="result"> RESULT:</p>
+    <p id="res">  </p>
+    </body>
+
+
+<script>
+
+    //using a javascript method document object getting id.
+    document.getElementById("addbtn").onclick=add2numbers;
+    document.getElementById("subbtn").onclick=Sub2numbers;
+
+    function add2numbers(){
+
+    //declare a value to variable a
+    let  a=document.getElementById("val1").value;
+
+    //Declare a value to variable b
+    let b= document.getElementById("val2").value;
+
+    //declare a adding value to variable add and using parseInt converting the text to number
+    let add = parseInt(a)+ parseInt(b);
+    document.getElementById("res").innerHTML=add;
+
+  }
+
+  function Sub2numbers(){
+    //declare a value to variable a
+    let  a=document.getElementById("val1").value;
+
+    //Declare a value to variable b
+    let b= document.getElementById("val2").value;
+
+    //declare a adding value to variable add and using parseInt converting the text to number
+    let sub = parseInt(a)- parseInt(b);
+    document.getElementById("res").innerHTML=sub;
+    
+  }
+</script>
+</html>
